@@ -65,7 +65,7 @@ router.post('/register', (req, res, next) => {
             const token = jwt.sign(payload, req.app.get('api_secret_key'), { expiresIn: 720 });
             res.json({
               status: 1,
-              token
+              token,
             });
           }
         });
