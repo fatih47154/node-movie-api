@@ -12,8 +12,12 @@ const director = require('./routes/director');
 
 const app = express();
 
-//DB Connection
+// DB Connection
 const db = require('./helper/db.js')(); // Sondaki '()' Modül İçerisindeki Fonksiyonu Çalıştırır
+
+// Config File
+const config = require('./config.js');
+app.set('api_secret_key', config.api_secret_key);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
