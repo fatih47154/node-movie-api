@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
 
 module.exports = () => {
-    mongoose.connect('mongodb://fatih47154:Fatih4715434_@ds155294.mlab.com:55294/heroku_rv295r8q', { useNewUrlParser: true, useCreateIndex: true});
-    // mongoose.set('useCreateIndex', true);
+    mongoose.connect('mongodb://fatih47154:Fatih4715434_@ds155294.mlab.com:55294/heroku_rv295r8q', { useNewUrlParser: true});
+    mongoose.set('useCreateIndex', true);
+    mongoose.set('useFindAndModify', false);
 
     mongoose.connection.on('open', () => {
         // console.log('MongoDB: Connected');
