@@ -110,4 +110,19 @@ describe('Movie /api/movies Test', () => {
                 });
         })
     });
+
+    describe('/Delete/:movie_id Movie', () => {
+        it('It Should Delete a Movie Given by ID', (done) => {
+
+            chai.request(server)
+                .delete('/api/movies/' + movieId)
+                .set('x-access-token', token)
+                .end((err, res) => {
+                    res.should.have.status(200);
+                    res.body.should.be.a('object');
+                    res.body.should.have.property('status').eql(1);
+                    done();
+                });
+        })
+    });
 });
