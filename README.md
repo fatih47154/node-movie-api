@@ -1,3 +1,5 @@
+[![Build Status](https://api.travis-ci.org/fatih47154/node-movie-api.svg)](https://travis-ci.org/fatih47154/node-movie-api)
+
 # Node - Movie-Api
 
 # Movies
